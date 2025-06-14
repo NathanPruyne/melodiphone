@@ -19,6 +19,8 @@ File for WiFi SSID and password
 
 Max patch for polling Arduino, processing sensor data out, and playing data. Current configuration is for timbre transfer using DDSP and playing drum samples (`kick.wav` and `snare.wav` included).
 
+Also includes a method for filtering valve clicks and other rattling noises from the output of the microphone by detecting if a pitch is consistently held through multiple samples and only outputting to the processing if so. The amount of samples can be customized based on sensitivity and the type of lavalier microphone used.
+
 * **hardsynth/**
 
 Hard synthesizer patch for [DDSP-VST](https://magenta.tensorflow.org/ddsp-vst) that works nicely with the melodiphone.
